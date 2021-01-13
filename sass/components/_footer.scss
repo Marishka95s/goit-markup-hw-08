@@ -1,0 +1,122 @@
+/* FOOTER */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &--unlimited {
+      background-color: $footer-color;
+    }
+  }
+
+  .footer__left-part {
+    max-width: 100%;
+  }
+  .footer-contacts {
+    margin-top: 20px;
+  }
+  .footer-contacts__list {
+    padding-inline-start: 0;
+    margin-top: 20px;
+  }
+  .footer-contacts__item {
+    margin-bottom: 9px;
+  
+    color: $additional-color;
+  
+    font-family: $main-font, sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+
+    &:last-child {
+      // margin-bottom: 0px;
+    }
+  }
+  .footer-contacts__link {
+    color: $second-additional-color;
+  }
+  
+  .footer__сenter-part {
+    // margin-left: 70px;
+    // margin-right: 93px;
+    // width: 206px;
+  }
+  .footer__invitation {
+    color: $additional-color;
+    margin-bottom: 20px;
+  }
+  .social-links--footerish {
+    padding: 0;
+    --color5: $additional-color;
+    fill: $additional-color;
+  }
+  
+  .footer__right-part {
+    // display: flex;
+    // flex-direction: column;
+  }
+  .form-submit {
+    // display: flex;
+  }
+  .form-submit__input {
+    // margin-right: 12px;
+    padding-top: 15px;
+    padding-right: 16px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    // width: 358px;
+    // height: 50px;
+  
+    color: $additional-color;
+    background-color: $footer-color;
+  
+    font-family: $main-font, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+  
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  
+  .button-submit {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  
+    padding-top: 10px;
+    padding-right: 28px;
+    padding-bottom: 10px;
+    padding-left: 29px;
+  
+    background-color: $accent-color;
+    color: $additional-color;
+    --color5: $additional-color;
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  
+    font-family: $main-font, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    border: none;
+  }
+  .button-submit__icon {
+    margin-left: 10px;
+    background-color: $accent-color;
+    --color5: $additional-color;
+  }

@@ -1,0 +1,82 @@
+//* Basic teg-style settings */
+body {
+    background-color: $additional-color;
+    color: $main-text-color;
+  
+    font-family: $main-font;
+    letter-spacing: 0.03em;
+}
+
+  h2 {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+  }
+  h3 {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+  p {
+    color: $auxiliary-text-color;
+  
+    font-family: $main-font;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+
+  //* Usefull for future */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  //* Basic social-links settings */
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-top: 16px;
+  }
+  .social-links__link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+  
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .social-links__link:hover,
+  .social-links__link:focus {
+    background-color: $accent-color;
+    --color5: $additional-color;
+    fill: $additional-color;
+  
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 50%;
+  }
+
+  //* Usefull for future */
+  // img {
+  //   display: block;
+  //   min-width: 100%;
+  //   height: auto;
+  // } */
+  

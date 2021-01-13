@@ -1,0 +1,174 @@
+//* PORTFOLIO PAGE STYLING */
+//* Filter style */
+  .filter-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    padding-inline-start: 0;
+    margin-bottom: 50px;
+  }
+  .filter-list__item {
+    margin-right: 8px;
+  
+    background-color: $section-bg-color;
+    color: $main-text-color;
+  
+    font-family: $main-font, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border: none;
+    border-radius: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .filter-list__button {
+    padding-top: 6px;
+    padding-right: 22px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+  
+    background-color: transparent;
+    color: $main-text-color;
+    border: none;
+    border-radius: 4px;
+  
+    font-family: $main-font, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+  
+    transition-property: background-color, color, border, box-shadow;
+    @include trans-func(250ms);
+
+    &:hover, &:focus {
+      background-color: $accent-color;
+      color: $additional-color;
+      border-radius: 4px;
+      border: none;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+    }
+  }
+  
+  //* Projects style */
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+    padding-inline-start: 0;
+  }
+  .project-list__item {
+    display: block;
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  
+    box-sizing: border-box;
+
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0px;
+    }
+  }
+  
+  .project-list__link {
+    display: block;
+    width: 100%;
+  
+    background-color: $additional-color;
+  
+    transition-property: box-shadow;
+    @include trans-func(250ms);
+
+   &:hover, &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  }
+  
+  .project-list__overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  .project-list__thumb-text {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+  
+    padding-top: 63px;
+    padding-right: 24px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+  
+    font-family: $main-font, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+  
+    color: $additional-color; 
+    background-color: rgba(33, 150, 243, 0.9);
+  
+    transition-property: opacity, transform;
+    @include trans-func(250ms);
+
+    .project-list__link:hover &, 
+    .project-list__link:focus & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
+  
+  .project-list__info {
+    display: block;
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+  
+    background-color: $additional-color;
+  
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+  }
+  .project-list__name {
+    margin: 0;
+  
+    font-family: $main-font, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    text-transform: none;
+  }
+  .project-list__description {
+    margin-top: 4px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  
+    font-family: $main-font, sans-serif;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+  } 
+  

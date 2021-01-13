@@ -1,0 +1,313 @@
+//* HERO */
+  .hero {
+    
+    
+    @media screen and (min-width: 480px) {
+      padding-top: 118px;
+      padding-bottom: 118px;}
+    // margin: 0 auto;
+
+  
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(47, 48, 58, 0.8);
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero.jpg");
+    max-width: 1600px;
+    @media screen and (min-width: 480px) {
+      height: 400px;
+    // width: var(--max-width);
+    }
+    @media screen and (min-width: 768px) {
+    height: 600px;
+    width: var(--max-width);
+  }
+  }
+  .hero__title {
+    padding: 0;
+  
+    color: $additional-color;
+  
+    font-family: $main-font;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 480px){
+      font-size: 26px;
+      line-height: 1.62;
+    }
+    @media screen and (min-width: 768px){
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+  
+  .hero__button {
+    display: inline-block;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+  
+    background-color: $accent-color;
+    color: $additional-color;
+  
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    align-items: center;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    border: none;
+  }
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 999;
+  
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      visibility: visible;
+    }
+  }
+    .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    min-height: 581px;
+    min-width: 528px;
+    padding: 40px;
+  
+    background-color: $additional-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+  .modal__close-svg {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    height: 30px;
+    width: 30px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    fill: #000000;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $additional-color;
+  
+    @include trans-func(250ms);
+
+    &:hover, &:focus {
+      fill: $accent-color;
+      cursor: pointer;
+    }
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__title {
+    margin-bottom: 12px;
+  
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  
+    color: $main-text-color;
+  }
+  .form__inputs-set {
+    margin-bottom: 20px;
+  }
+  .inputs-set__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .inputs-set__info {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  
+    color: $auxiliary-text-color;
+  }
+  .inputs-set__icon {
+    position: absolute;
+    bottom: 13.5px;
+    left: 12px;
+    fill: $main-text-color;
+  }
+  .inputs-set__input {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+  
+    font-family: $main-font;
+    font-size: 16px;
+  
+    @include trans-func(250ms);
+
+    &:focus {
+      border-color: $accent-color;
+      outline: none;
+      cursor: pointer;
+    
+      @include trans-func(250ms);
+    }
+    &:focus ~ .inputs-set__icon {
+      fill: $accent-color;
+      cursor: pointer;
+      
+      @include trans-func(250ms);
+    }
+  }
+  .inputs-set__input--comment {
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+  
+    max-width: 448px;
+    max-height: 120px;
+
+    &::placeholder {
+      font-family: $main-font;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.01em;
+    
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+   
+  .checkbox {
+    align-self: center;
+  }
+  .checkbox__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .checkbox__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .checkbox__info {
+    align-self: center;
+  
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  
+    color: $auxiliary-text-color;
+  }
+  .checkbox__link {
+    text-decoration-line: underline;
+    color: $accent-color;
+  }
+  .checkbox__input + .checkbox__icon {
+    display: inline-block;
+    margin-right: 7px;
+    height: 15px;
+    width: 16px;
+  
+    background-color: $additional-color;
+    border: 2px solid $main-text-color;
+    border-radius: 2px;
+  
+    @include trans-func(250ms);
+  }
+  .checkbox__input:checked + .checkbox__icon {
+    background-color: $accent-color;
+    background-image: url("../images/check.svg");
+    background-size: contain;
+    background-origin: border-box;
+    border-color: transparent;
+    border-radius: 2px;
+  
+    @include trans-func(250ms);
+  }
+  .form__button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: center;
+    padding-right: 55px;
+    padding-left: 56px;
+  
+    background-color: $accent-color;
+    color: $additional-color;
+    --color5: $additional-color;
+    // fill: $additional-color;
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  
+    font-family: $main-font, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    border: none;
+
+    &:hover, &:focus {
+      background: #188ce8;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  

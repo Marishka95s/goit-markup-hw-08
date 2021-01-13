@@ -45,10 +45,14 @@ body {
   //* Basic social-links settings */
   .social-links {
     display: flex;
-    justify-content: space-between;
-    padding-left: 32px;
-    padding-right: 32px;
-    margin-top: 16px;
+    justify-content: center;
+  }
+  .social-links-item{
+    margin-right: 10px;
+
+    &:last-child{
+      margin-right: 0;
+    }
   }
   .social-links__link {
     width: 44px;

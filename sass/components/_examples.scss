@@ -2,18 +2,22 @@
   .examples {
     padding-top: 0px;
     z-index: 100;
+
+    @media screen and (max-width: 1199px) {
+      display: none;
+     }
   }
   .examples__title {
     margin-bottom: 50px;
   }
   .examples-list {
-    // display: flex;
-    // flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     padding-inline-start: 0;
   }
   .examples-list__item {
     display: block;
-    // width: calc((100% - 60px) / 3);
+    width: calc((100% - 60px) / 3);
     margin-right: 30px;
 
     &:last-child {
@@ -27,7 +31,7 @@
     position: absolute;
     top: 224px;
     left: 0;
-    // display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;

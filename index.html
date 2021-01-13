@@ -17,6 +17,17 @@
         <a href="./index.html">
             <p class="logo"><span class="logo__text">Web</span>Studio</p>
         </a>
+        <button type="button" 
+        class="menu-button is-open" 
+        aria-expanded="false" 
+        aria-controls="menu-container" 
+        data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+                <use class="icon-close" href="./images/sprite.svg#close"></use>
+            </svg>
+        </button>       
+        <div class="navigation-adaptive" id="menu-container" data-menu-button> 
         <ul class="site-nav">
             <li class="site-nav__item"><a href="./index.html" class="site-nav__link selected-page">Студия</a></li>
             <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a ></li>
@@ -34,6 +45,7 @@
                 </svg>
                 <span>+38 096 111 11 11</span></a></li>
         </ul>
+        </div>
       </nav>
     </header>
 
@@ -88,7 +100,7 @@
                         <label class="checkbox__label">                           
                             <input class="checkbox__input" type="checkbox" name="mail" value="agree" />                             
                                 <svg class="checkbox__icon" width="16" height="15">
-                                    <use href="./images/sprite.svg#checked"></use>
+                                    <use href="./images/sprite.svg#check"></use>
                                 </svg>
                                  <span class="checkbox__info"> Соглашаюсь с рассылкой и принимаю 
                                     <a href="" class="checkbox__link">Условия договора</a>
@@ -433,8 +445,9 @@
         </div>
     </div>
 </footer>
-<script src="./js/menu.js"></script> 
-<script src="./js/modal.js"></script> 
+<script src="./js/menu-button.js"></script> 
+<script src="./js/menu-modal.js"></script> 
+<script src="./js/form-modal.js"></script>
 <script src="./js/smth-more.js"></script> 
 </body>
 </html> 

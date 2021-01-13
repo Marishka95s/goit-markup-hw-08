@@ -355,9 +355,6 @@ summary {
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 0 auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   outline: 1px solid tomato;
 }
 
@@ -386,6 +383,10 @@ body {
   color: #212121;
   font-family: "Roboto";
   letter-spacing: 0.03em;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 h2 {
@@ -482,6 +483,7 @@ p {
 
 @media screen and (min-width: 1200px) {
   .logo {
+    font-family: "Raleway";
     font-size: 26px;
     line-height: 1.19;
   }
@@ -496,23 +498,104 @@ p {
   color: #2196f3;
 }
 
-.navigation {
+.menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ececec;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
-  .navigation {
+  .menu-container {
     padding-top: 24px;
     padding-bottom: 24px;
   }
+}
+
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-button:hover, .menu-button:focus {
+  color: #2196f3;
+  --color4: $accent-color;
+  fill: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.navigation-adaptive {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation-adaptive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 88px;
+  margin-right: 84px;
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-left: 93px;
+    margin-right: 305px;
+  }
+}
+
+.site-nav__item {
+  margin-right: 50px;
 }
 
 .site-nav__item:last-child {
@@ -526,13 +609,29 @@ p {
   color: #212121;
   font-family: "Roboto";
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__link {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav__link {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .site-nav__link:hover, .site-nav__link:focus {
@@ -548,7 +647,7 @@ p {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0.5px;
+  bottom: 0;
   width: 100%;
   height: 4px;
   background: #2196f3;
@@ -556,8 +655,36 @@ p {
 }
 
 .contact-nav {
+  display: inline;
+  margin-left: auto;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.contact-nav__item {
+  margin-bottom: 10px;
+}
+
+.contact-nav__item:nth-last-child(-n+1) {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-nav__item {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .contact-nav__item:nth-last-child(-n+1) {
+    margin-right: 0;
+  }
 }
 
 .contact-nav__link {
@@ -568,14 +695,28 @@ p {
       -ms-flex-align: center;
           align-items: center;
   color: #757575;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.16;
   font-weight: 500;
   letter-spacing: 0.02em;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-nav__link {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-nav__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .contact-nav__link:hover, .contact-nav__link:focus {
@@ -1309,6 +1450,9 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1317,6 +1461,9 @@ p {
 @media screen and (min-width: 1200px) {
   .footer {
     text-align: start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -1331,13 +1478,6 @@ p {
 
 .footer__item:nth-last-child(-n+1) {
   margin-bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 @media screen and (max-width: 767px) {
@@ -1416,6 +1556,28 @@ p {
   fill: #ffffff;
 }
 
+.form-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-submit {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .form-submit__input {
   padding-top: 15px;
   padding-right: 16px;
@@ -1441,6 +1603,7 @@ p {
 @media screen and (min-width: 1200px) {
   .form-submit__input {
     width: 358px;
+    margin-right: 12px;
   }
 }
 
@@ -1472,6 +1635,8 @@ p {
   padding-right: 28px;
   padding-bottom: 10px;
   padding-left: 29px;
+  margin-top: 20px;
+  width: 200px;
   background-color: #2196f3;
   color: #ffffff;
   --color5: $additional-color;

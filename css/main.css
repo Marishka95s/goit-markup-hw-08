@@ -1503,48 +1503,53 @@ p {
   color: #ffffff;
 }
 
-.footer__item {
+.footer-list {
+  width: 100%;
+}
+
+.footer-list:nth-child(n) {
+  margin-right: 0px;
+}
+
+.footer-list:nth-last-child(-n+1) {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.footer-list__item {
   max-width: 100%;
   margin-bottom: 60px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.footer__item:nth-last-child(-n+1) {
+.footer-list__item:nth-last-child(-n+1) {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 767px) {
-  .footer__item {
-    width: 100%;
-  }
-  .footer__item:nth-child(n) {
-    margin-right: 0px;
-  }
-  .footer__item:nth-last-child(-n+1) {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer__item {
-    width: calc((100% - 30px) / 2);
-  }
-  .footer__item:nth-child(2n) {
-    margin-right: 0px;
-  }
-  .footer__item:nth-last-child(-n+2) {
-    margin-bottom: 0;
-  }
-}
-
 @media screen and (min-width: 1200px) {
-  .footer__item {
-    width: calc((100% - 60px) / 3);
-  }
-  .footer__item:last-child {
-    margin-right: 0px;
+  .footer-list__item {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -1603,6 +1608,18 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .form-submit__input {
@@ -1680,6 +1697,12 @@ p {
   letter-spacing: 0.06em;
   border-radius: 4px;
   border: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .button-submit {
+    margin-top: 0;
+  }
 }
 
 .button-submit__icon {

@@ -402,6 +402,7 @@ h3 {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -473,6 +474,34 @@ p {
   border-radius: 50%;
 }
 
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    padding-top: 20px;
+    padding-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
 .logo {
   color: #000000;
   font-family: "Raleway";
@@ -487,11 +516,6 @@ p {
     font-size: 26px;
     line-height: 1.19;
   }
-}
-
-.logo--bottom {
-  margin-bottom: 20px;
-  color: #ffffff;
 }
 
 .logo__text {
@@ -1453,6 +1477,9 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1471,9 +1498,17 @@ p {
   background-color: #2f303a;
 }
 
+.logo--bottom {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
 .footer__item {
   max-width: 100%;
   margin-bottom: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer__item:nth-last-child(-n+1) {
@@ -1529,6 +1564,7 @@ p {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1557,25 +1593,16 @@ p {
 }
 
 .form-submit {
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-@media screen and (min-width: 1200px) {
-  .form-submit {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
 }
 
 .form-submit__input {
@@ -1635,8 +1662,10 @@ p {
   padding-right: 28px;
   padding-bottom: 10px;
   padding-left: 29px;
-  margin-top: 20px;
   width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
   background-color: #2196f3;
   color: #ffffff;
   --color5: $additional-color;

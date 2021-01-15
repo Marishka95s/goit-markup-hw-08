@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items:flex-start;
+    justify-content: center;
     text-align: center;
 
     @media screen and (min-width: 1200px) {
@@ -17,10 +18,14 @@
       background-color: $footer-color;
     }
   }
-
+  .logo--bottom {
+    margin-bottom: 20px;
+    color: $additional-color;
+  }
   .footer__item {
     max-width: 100%;
     margin-bottom: 60px;
+    justify-content: center;
 
     &:nth-last-child(-n+1){
       margin-bottom: 0;
@@ -69,6 +74,7 @@
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
+    letter-spacing: 0.03em;
 
     @media screen and (min-width: 1200px) {
       margin-bottom: 9px;
@@ -95,13 +101,15 @@
   }
   
   .form-submit {
+    text-align: center;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     flex-direction: column;
+   
 
-    @media screen and (min-width: 1200px) {
-      flex-direction: row;
-    }
+  //   @media screen and (min-width: 1200px) {
+  //     flex-direction: row;
+  //   }
   }
   .form-submit__input {
     padding-top: 15px;
@@ -144,8 +152,16 @@
     padding-right: 28px;
     padding-bottom: 10px;
     padding-left: 29px;
-    margin-top: 20px;
     width: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    
+    @media screen and (min-width: 1200px) {
+      // width: 358px;
+      // margin-right: 12px;
+    }
 
   
     background-color: $accent-color;

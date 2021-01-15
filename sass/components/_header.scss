@@ -1,4 +1,20 @@
 //* HEADER */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+  @media screen and (min-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
 //* Logo */
   .logo {
     color: #000000;
@@ -13,13 +29,6 @@
       font-size: 26px;
       line-height: 1.19;
     }
-
-    &--bottom {
-      margin-bottom: 20px;
-
-      color: $additional-color;
-    }
-
   }
   .logo__text {
     color: $accent-color;

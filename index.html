@@ -12,40 +12,40 @@
 </head>
 <body>
     <!-- Шапка-->
-    <header>
+    <header class="page-header">
       <nav class="container navigation">  
         <a href="./index.html">
             <p class="logo"><span class="logo__text">Web</span>Studio</p>
         </a>
-        <button type="button" 
-        class="menu-button is-open" 
-        aria-expanded="false" 
-        aria-controls="menu-container" 
+        <button type="button" class="menu-button"    aria-expanded="false" aria-controls="menu-container" 
         data-menu-button>
             <svg width="40" height="40" aria-label="Переключатель мобильного меню">
                 <use class="icon-menu" href="./images/sprite.svg#menu"></use>
                 <use class="icon-close" href="./images/sprite.svg#close"></use>
             </svg>
         </button>       
-        <div class="navigation-adaptive" id="menu-container" data-menu-button> 
-        <ul class="site-nav">
-            <li class="site-nav__item"><a href="./index.html" class="site-nav__link selected-page">Студия</a></li>
-            <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a ></li>
-            <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a ></li>
-        </ul>
-        <ul class="contact-nav">
-            <li class="contact-nav__item"><a href="mailto:info@devstudio.com" class="contact-nav__link">
-                <svg class="contact-nav__icon" width="16" height="12">
+        <div class="navigation-adaptive" id="menu-container" data-menu> 
+            <ul class="site-nav">
+                <li class="site-nav__item">
+                    <a href="./index.html" class="site-nav__link selected-page">Студия</a></li>
+                <li class="site-nav__item">
+                    <a href="./portfolio.html" class="site-nav__link">Портфолио</a ></li>
+                <li class="site-nav__item">
+                    <a href="" class="site-nav__link">Контакты</a ></li>
+            </ul>
+            <ul class="contact-nav">
+                <li class="contact-nav__item"><a href="mailto:info@devstudio.com" class="contact-nav__link">
+                    <svg class="contact-nav__icon" width="16" height="12">
                     <use href="./images/sprite.svg#envelope"></use>
-                </svg>
-                <span>info@devstudio.com</span></a></li>
-            <li class="contact-nav__item"><a href="tel:+380961111111" class="contact-nav__link">
-                <svg class="contact-nav__icon" width="10" height="16">
-                    <use href="./images/sprite.svg#smartphone"></use>
-                </svg>
-                <span>+38 096 111 11 11</span></a></li>
-        </ul>
-        </div>
+                    </svg>
+                    <span>info@devstudio.com</span></a></li>
+                <li class="contact-nav__item"><a href="tel:+380961111111" class="contact-nav__link">
+                    <svg class="contact-nav__icon" width="10" height="16">
+                        <use href="./images/sprite.svg#smartphone"></use>
+                    </svg>
+                    <span>+38 096 111 11 11</span></a></li>
+            </ul>
+            </div>
       </nav>
     </header>
 
@@ -386,24 +386,25 @@
     <!-- Подвал-->
 <footer class="footer--unlimited">
     <div class="container footer">
-        <div class="footer__item">
-        <a href="./index.html">
-            <p class="logo logo--bottom">
-            <span class="logo__text">Web</span>Studio</p>
-        </a>
-        <address class="footer-contacts">
-            <ul class="footer-contacts__list">
-                <li class="footer-contacts__item">
-                    <span>г. Киев, пр-т Леси Украинки, 26</span></li>
-                <li class="footer-contacts__item">
-                    <a class="footer-contacts__link" href="mailto:info@example.com">info@example.com</a> </li>
-                <li class="footer-contacts__item">
-                    <a class="footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a> </li>
-            </ul>
-        </address>
-        </div>
+        <ul class="footer__list">
+        <li class="footer__item">
+             <a href="./index.html">
+                <p class="logo logo--bottom">
+                <span class="logo__text">Web</span>Studio</p>
+            </a>
+            <address class="footer-contacts">
+                <ul class="footer-contacts__list">
+                    <li class="footer-contacts__item">
+                        <span>г. Киев, пр-т Леси Украинки, 26</span></li>
+                    <li class="footer-contacts__item">
+                        <a class="footer-contacts__link" href="mailto:info@example.com">info@example.com</a> </li>
+                    <li class="footer-contacts__item">
+                        <a class="footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a> </li>
+                </ul>
+            </address>
+        </li>
 
-        <div class="footer__item">
+        <li class="footer__item">
             <h3 class="footer__invitation">Присоединяйтесь</h3>
             <ul class="social-links social-links--footerish">
                 <li class="social-links-item"><a href="" class="social-links__link">
@@ -427,9 +428,9 @@
                     </svg>
                 </a></li>
             </ul>
-        </div>
+        </li>
 
-        <div class="footer__item">
+        <li class="footer__item">
             <h3 class="footer__invitation">Подпишитесь на рассылку</h3>
             <form class="form-submit">
                 <label>
@@ -442,7 +443,8 @@
                     </svg>
                 </button>
             </form>
-        </div>
+        </li>
+        </ul>
     </div>
 </footer>
 <script src="./js/menu-button.js"></script> 

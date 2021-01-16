@@ -5,14 +5,13 @@
     align-items:flex-start;
     justify-content: center;
     text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     @media screen and (min-width: 1200px) {
       text-align: start;
       align-items: baseline;
     }
-
-    padding-top: 60px;
-    padding-bottom: 60px;
 
     &--unlimited {
       background-color: $footer-color;
@@ -32,12 +31,12 @@
         margin-bottom: 0;
       }
     
-    @media screen and (min-width: 768px) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items:baseline;
-    }
+      @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items:baseline;
+      }
   }
   .footer-list__item {
     max-width: 100%;
@@ -78,14 +77,10 @@
     &:last-child {
       margin-bottom: 0px;
     }
-
-
   }
   .footer-contacts__link {
     color: $second-additional-color;
   }
-  
- 
   .footer__invitation {
     color: $additional-color;
     margin-bottom: 20px;
@@ -104,8 +99,7 @@
    
 
     @media screen and (min-width: 1200px) {
-     display: flex;
-     flex-direction: row;
+      flex-direction: row;
     }
   }
   .form-submit__input {
@@ -157,10 +151,8 @@
     
     @media screen and (min-width: 1200px) {
       margin-top: 0;
-      // margin-right: 12px;
     }
-
-  
+      
     background-color: $accent-color;
     color: $additional-color;
     --color5: $additional-color;

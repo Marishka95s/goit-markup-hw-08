@@ -12,8 +12,8 @@
 </head>
 <body>
     <!-- Шапка-->
-    <header class="page-header">
-      <nav class="container navigation">  
+    <header class="page-header--unlimited">
+      <nav class="container header">  
         <a href="./index.html">
             <p class="logo"><span class="logo__text">Web</span>Studio</p>
         </a>
@@ -448,6 +448,12 @@
         </ul>
     </div>
 </footer>
+<!-- <script>
+    const { height:headerHeight} = document
+        .querySelector(".header")
+        .getBoundingClientRect();
+    document.body.style.paddingTop = `${headerHeight}px`;
+</script> -->
 <script src="./js/menu-button.js"></script> 
 <script src="./js/menu-modal.js"></script> 
 <script src="./js/form-modal.js"></script>

@@ -884,13 +884,8 @@ p {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 480px) {
-  .hero__title {
-    font-size: 26px;
-    line-height: 1.62;
-  }
+  font-size: 26px;
+  line-height: 1.62;
 }
 
 @media screen and (min-width: 1200px) {

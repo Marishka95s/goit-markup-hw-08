@@ -26,10 +26,10 @@
             <div class="menu-container" id="menu-container" data-menu>
                 <ul class="site-nav">
                     <li class="site-nav__item">
-                        <a href="./index.html" class="site-nav__link selected-page">Студия</a>
+                        <a href="./index.html" class="site-nav__link">Студия</a>
                     </li>
                     <li class="site-nav__item">
-                        <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+                        <a href="./portfolio.html" class="site-nav__link selected-page">Портфолио</a>
                     </li>
                     <li class="site-nav__item">
                         <a href="" class="site-nav__link">Контакты</a>
@@ -52,9 +52,10 @@
     </header>
 
     <!-- Наполнение страницы-->
-    <main class="container">
+    <main>
       <h1 class="visually-hidden">Портфолио</h1>
-      <ul class="filter-list">
+      <section class="container filters">
+        <ul class="filter-list">
         <li class="filter-list__item">
             <button type="button" class="filter-list__button">
                 Все</button></li>
@@ -70,10 +71,11 @@
         <li class="filter-list__item">
             <button type="button" class="filter-list__button">
                 Маркетинг</button></li>
-      </ul>
+        </ul>
+      </section>
       <h2 class="visually-hidden">Проекты</h2>
-
-      <ul class="project-list">
+        <section class="container projects">
+            <ul class="project-list">
         <li class="project-list__item">
             <a href="" class="project-list__link">
                 <div class="project-list__overlay">
@@ -190,7 +192,8 @@
                 </div>
             </a>
         </li>      
-      </ul>
+            </ul>
+        </section>
     </main>
 
     <!-- Подвал-->

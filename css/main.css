@@ -1321,26 +1321,17 @@ p {
           padding-inline-start: 0;
 }
 
-.features__item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
 @media screen and (max-width: 767px) {
   .features__item {
     width: 100%;
-  }
-  .features__item:nth-child(n) {
-    margin-right: 0px;
-  }
-  .features__item:nth-last-child(-n+1) {
-    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .features__item {
     width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
   }
   .features__item:nth-child(2n) {
     margin-right: 0px;

@@ -1,6 +1,6 @@
 //* HEADER */
 .page-header--unlimited {
-  // background-color: $additional-color;
+  background-color: $additional-color;
 }
 .header {
   background-color: $additional-color;
@@ -111,7 +111,6 @@
   .site-nav {
     display: flex;
     align-items: center;
-    // justify-content: space-between;
 
     @media screen and (max-width: 767px){
       flex-direction: column;

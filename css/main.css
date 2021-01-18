@@ -486,6 +486,10 @@ p {
   border-radius: 50%;
 }
 
+.page-header--unlimited {
+  background-color: #ffffff;
+}
+
 .header {
   background-color: #ffffff;
   display: -webkit-box;
@@ -940,8 +944,8 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-height: 581px;
-  min-width: 528px;
+  height: 609px;
+  width: 450px;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -953,6 +957,13 @@ p {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    height: 581px;
+    width: 528px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1005,10 +1016,17 @@ p {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .form__title {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 
 .form__inputs-set {
@@ -1157,10 +1175,17 @@ p {
       align-self: center;
   font-family: "Roboto";
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox__info {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__link {

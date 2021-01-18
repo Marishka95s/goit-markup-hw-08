@@ -4,9 +4,13 @@ body {
     color: $main-text-color;
     font-family: $main-font;
     letter-spacing: 0.03em;
-    padding-top: 61px;
 
-    @media screen (min-width:768px) {
+
+    @media screen and (max-width:767px) {
+      padding-top: 61px;
+    }
+
+    @media screen and (min-width:768px) {
       padding-top: 0;
     }
 

@@ -385,6 +385,18 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 61px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 0;
+  }
+}
+
 body.modal-open {
   overflow: hidden;
 }
@@ -474,10 +486,6 @@ p {
   border-radius: 50%;
 }
 
-.page-header--unlimited {
-  background-color: #ffffff;
-}
-
 .header {
   background-color: #ffffff;
   display: -webkit-box;
@@ -495,11 +503,19 @@ p {
   z-index: 10;
 }
 
+@media screen and (max-width: 479px) {
+  .header {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .header {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
@@ -832,7 +848,6 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 61px;
   background-color: rgba(47, 48, 58, 0.8);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
@@ -1697,7 +1712,7 @@ p {
   padding-bottom: 15px;
   padding-left: 16px;
   height: 50px;
-  width: 450px;
+  width: 100%;
   color: #ffffff;
   background-color: #2f303a;
   font-family: "Roboto", sans-serif;
@@ -1713,9 +1728,15 @@ p {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 480px) {
+  .form-submit__input {
+    width: 450px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .form-submit__input {
-    width: 358px;
+    max-width: 358px;
     margin-right: 12px;
   }
 }

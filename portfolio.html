@@ -11,8 +11,8 @@
 
 <body>
     <!-- Верхняя линия-->
-    <header class="page-header">
-        <nav class="container navigation">
+    <header class="page-header--unlimited">
+        <nav class="container header">
             <a href="./index.html">
                 <p class="logo"><span class="logo__text">Web</span>Studio</p>
             </a>
@@ -26,10 +26,10 @@
             <div class="menu-container" id="menu-container" data-menu>
                 <ul class="site-nav">
                     <li class="site-nav__item">
-                        <a href="./index.html" class="site-nav__link">Студия</a>
+                        <a href="./index.html" class="site-nav__link selected-page">Студия</a>
                     </li>
                     <li class="site-nav__item">
-                        <a href="./portfolio.html" class="site-nav__link selected-page">Портфолио</a>
+                        <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
                     </li>
                     <li class="site-nav__item">
                         <a href="" class="site-nav__link">Контакты</a>
@@ -194,57 +194,62 @@
     </main>
 
     <!-- Подвал-->
-    <footer class="footer--unlimited">
-        <div class="container footer">
-            <ul class="footer-list">
+<footer class="footer--unlimited">
+    <div class="container footer">
+        <ul class="footer-list">
             <li class="footer-list__item">
-                 <a href="./index.html">
+                <a href="./index.html">
                     <p class="logo logo--bottom">
-                    <span class="logo__text">Web</span>Studio</p>
+                        <span class="logo__text">Web</span>Studio
+                    </p>
                 </a>
                 <address class="footer-contacts">
                     <ul class="footer-contacts__list">
                         <li class="footer-contacts__item">
-                            <span>г. Киев, пр-т Леси Украинки, 26</span></li>
+                            <span>г. Киев, пр-т Леси Украинки, 26</span>
+                        </li>
                         <li class="footer-contacts__item">
-                            <a class="footer-contacts__link" href="mailto:info@example.com">info@example.com</a> </li>
+                            <a class="footer-contacts__link" href="mailto:info@example.com">info@example.com</a>
+                        </li>
                         <li class="footer-contacts__item">
-                            <a class="footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a> </li>
+                            <a class="footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
+                        </li>
                     </ul>
                 </address>
             </li>
-    
+
             <li class="footer-list__item">
                 <h3 class="footer__invitation">Присоединяйтесь</h3>
                 <ul class="social-links social-links--footerish">
                     <li class="social-links-item"><a href="" class="social-links__link">
-                        <svg width="20" height="20">
-                            <use href="./images/sprite.svg#instagram"></use>
-                        </svg>
-                    </a></li>
+                            <svg width="20" height="20">
+                                <use href="./images/sprite.svg#instagram"></use>
+                            </svg>
+                        </a></li>
                     <li class="social-links-item"><a href="" class="social-links__link">
-                        <svg width="20" height="20">
-                            <use href="./images/sprite.svg#twitter"></use>
-                        </svg>
-                    </a></li>
+                            <svg width="20" height="20">
+                                <use href="./images/sprite.svg#twitter"></use>
+                            </svg>
+                        </a></li>
                     <li class="social-links-item"><a href="" class="social-links__link">
-                        <svg width="20" height="20">
-                            <use href="./images/sprite.svg#facebook"></use>
-                        </svg>
-                    </a></li>
+                            <svg width="20" height="20">
+                                <use href="./images/sprite.svg#facebook"></use>
+                            </svg>
+                        </a></li>
                     <li class="social-links-item"><a href="" class="social-links__link">
-                        <svg width="20" height="20">
-                            <use href="./images/sprite.svg#linkedin"></use>
-                        </svg>
-                    </a></li>
+                            <svg width="20" height="20">
+                                <use href="./images/sprite.svg#linkedin"></use>
+                            </svg>
+                        </a></li>
                 </ul>
             </li>
-    
+
             <li class="footer-list__item">
                 <h3 class="footer__invitation">Подпишитесь на рассылку</h3>
                 <form class="form-submit">
                     <label>
-                        <input type="email" class="form-submit__input" name="mail" placeholder="E-mail" autocomplete="off"/>
+                        <input type="email" class="form-submit__input" name="mail" placeholder="E-mail"
+                            autocomplete="off" />
                     </label>
                     <button type="submit" class="button-submit">
                         <span>Подписаться</span>
@@ -254,9 +259,9 @@
                     </button>
                 </form>
             </li>
-            </ul>
-        </div>
-    </footer>
+        </ul>
+    </div>
+</footer>
 <script src="./js/menu-button.js"></script>
 <script src="./js/menu-modal.js"></script>
 </body>

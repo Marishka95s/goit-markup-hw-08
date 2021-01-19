@@ -205,6 +205,11 @@
     padding-right: 24px;
     padding-bottom: 20px;
     padding-left: 24px;
+
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+      padding-right: 18px;
+      padding-left: 18px;
+    }
   
     background-color: $additional-color;
   

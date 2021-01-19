@@ -2136,6 +2136,13 @@ p {
   border-left: 1px solid #eeeeee;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-list__info {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
 .project-list__name {
   margin: 0;
   font-family: "Roboto", sans-serif;

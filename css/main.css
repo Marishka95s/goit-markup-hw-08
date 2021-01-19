@@ -355,7 +355,6 @@ summary {
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 0 auto;
-  outline: 1px solid tomato;
 }
 
 @media screen and (min-width: 480px) {

@@ -488,6 +488,7 @@ p {
 
 .page-header--unlimited {
   background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
 }
 
 .header {
@@ -503,7 +504,6 @@ p {
           justify-content: space-between;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ececec;
   z-index: 10;
 }
 

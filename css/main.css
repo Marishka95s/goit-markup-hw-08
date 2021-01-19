@@ -2038,7 +2038,7 @@ p {
 @media screen and (min-width: 1200px) {
   .project-list__item {
     width: calc((100% - 60px) / 3);
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
   .project-list__item:nth-child(3n) {
     margin-right: 0px;

@@ -354,7 +354,8 @@ summary {
   padding-right: 15px;
   padding-top: 60px;
   padding-bottom: 60px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 480px) {
